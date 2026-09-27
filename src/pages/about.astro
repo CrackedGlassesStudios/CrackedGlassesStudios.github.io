@@ -1,0 +1,36 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<MainLayout title="About — Cracked Glasses Studios" activeNav="about">
+    <section class="about-page">
+        <div class="wrap">
+            <h1>Cracked Glasses Studios</h1>
+            <p>This is the official website of Cracked Glasses Studios.</p>
+        </div>
+    </section>
+</MainLayout>
+
+<style>
+    .about-page {
+        padding: 90px 0;
+    }
+    .wrap {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 0 24px;
+    }
+    h1 {
+        font-family: "Anton", sans-serif;
+        font-weight: 400;
+        text-transform: uppercase;
+        font-size: clamp(2rem, 5vw, 3rem);
+        letter-spacing: 0.4px;
+        margin-bottom: 18px;
+    }
+    p {
+        color: #b8b4a8;
+        font-size: 1.1rem;
+        line-height: 1.7;
+    }
+</style>

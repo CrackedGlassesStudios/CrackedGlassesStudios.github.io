@@ -1,0 +1,446 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import Breadcrumb from "../../components/Breadcrumb.astro";
+---
+
+<MainLayout
+  title="The Alchemist's Assistant — Cracked Glasses Studios"
+  activeNav="games"
+>
+  <Breadcrumb>
+    <a href="/">Home</a> / <a href="/games">Games</a> / The Alchemist's Assistant
+  </Breadcrumb>
+
+  <div class="stage">
+    <div class="book">
+      <div class="margins">
+        <div class="glyph-col">
+          <svg viewBox="0 0 24 24"
+            ><circle cx="12" cy="12" r="8"></circle><circle
+              cx="12"
+              cy="12"
+              r="1.4"
+              fill="currentColor"></circle></svg
+          >
+          <svg viewBox="0 0 24 24"><path d="M12 3 L21 19 L3 19 Z"></path></svg>
+          <svg viewBox="0 0 24 24"><path d="M3 5 L21 5 L12 21 Z"></path></svg>
+          <svg viewBox="0 0 24 24"
+            ><circle cx="12" cy="9" r="6"></circle><line
+              x1="12"
+              y1="15"
+              x2="12"
+              y2="21"></line><line x1="8" y1="18" x2="16" y2="18"></line></svg
+          >
+          <svg viewBox="0 0 24 24"
+            ><path d="M12 3 L21 19 L3 19 Z"></path><line
+              x1="6.5"
+              y1="15"
+              x2="17.5"
+              y2="15"></line></svg
+          >
+        </div>
+
+        <div class="content">
+          <div class="kicker">Chapter I</div>
+          <h1>The Alchemist's Assistant</h1>
+          <div class="subtitle">
+            a workshop, an apprentice, and rather too many exploding jars
+          </div>
+          <div class="divider"></div>
+
+          <p class="dropcap">
+            In the crooked back room of a shop that smells of burnt sugar and
+            lightning, a nameless apprentice inherits the messiest workshop in
+            the city. Every potion has a mind of its own, every ingredient a
+            temper, and the master alchemist has vanished &mdash; leaving only a
+            half-finished recipe and a very ominous note.
+          </p>
+          <p class="lede-note">
+            [Placeholder story hook &mdash; swap in your actual synopsis,
+            character names, and setting details here.]
+          </p>
+
+          <div class="chapter">
+            <h2>The Craft</h2>
+            <p>
+              Brew, mix, and mismix your way through unstable recipes, where one
+              wrong pinch of ingredient can turn a healing draught into a small
+              localized disaster. Manage your workshop, your reputation, and the
+              ever-growing pile of things you probably shouldn't have combined.
+            </p>
+          </div>
+
+          <div class="chapter">
+            <h2>The Formula</h2>
+            <ul class="recipe">
+              <li>
+                <span class="mark">I.</span><div>
+                  <h3>Brewing</h3><p>
+                    [Describe the core brewing/crafting loop here.]
+                  </p>
+                </div>
+              </li>
+              <li>
+                <span class="mark">II.</span><div>
+                  <h3>Chaos Mechanic</h3><p>
+                    [Describe what happens when a potion goes wrong.]
+                  </p>
+                </div>
+              </li>
+              <li>
+                <span class="mark">III.</span><div>
+                  <h3>Progression</h3><p>
+                    [Describe unlocks, upgrades, or story progression.]
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="chapter">
+            <h2>From the Workshop</h2>
+          </div>
+          <div class="plates">
+            <div class="plate">
+              <img
+                src="/assets/images/concept-art-01.jfif"
+                alt="The Alchemist's Assistant concept art 01"
+              />
+            </div>
+            <div class="plate">Concept art plate 02<br />[placeholder]</div>
+            <div class="plate">Concept art plate 03<br />[placeholder]</div>
+          </div>
+
+          <div class="seal">
+            <a class="btn" href="#">Follow the Development</a>
+            <div class="note">
+              Currently in active development &mdash; more pages of this tome
+              coming soon.
+            </div>
+          </div>
+        </div>
+
+        <div class="glyph-col">
+          <svg viewBox="0 0 24 24"
+            ><path d="M12 21 A9 9 0 0 1 12 3 A6 6 0 0 0 12 21 Z"></path></svg
+          >
+          <svg viewBox="0 0 24 24"
+            ><path d="M3 19 L21 19 L12 3 Z"></path><line
+              x1="6.5"
+              y1="9"
+              x2="17.5"
+              y2="9"></line></svg
+          >
+          <svg viewBox="0 0 24 24"
+            ><circle cx="12" cy="12" r="8" stroke-dasharray="2 3"></circle></svg
+          >
+          <svg viewBox="0 0 24 24"
+            ><circle cx="12" cy="8" r="5"></circle><path d="M7 13 Q12 9 17 13"
+            ></path><line x1="12" y1="16" x2="12" y2="21"></line></svg
+          >
+          <svg viewBox="0 0 24 24"><path d="M3 5 L21 5 L12 21 Z"></path></svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</MainLayout>
+
+<style>
+  :root {
+    --void: #0c0d10;
+    --parchment: #123c2c;
+    --ink: #e9dcae;
+    --ink-soft: #b9c79c;
+    --gold: #f4d35e;
+    --maroon: #e0455f;
+    --teal: #5c8fe8;
+    --amethyst: #b07de0;
+    --emerald: #6fe0ab;
+  }
+  .stage {
+    padding: 70px 16px 100px;
+    display: flex;
+    justify-content: center;
+    background:
+      radial-gradient(
+        ellipse 60% 40% at 50% 0%,
+        rgba(111, 224, 171, 0.07),
+        transparent 60%
+      ),
+      var(--void);
+  }
+
+  .book {
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+    background:
+      repeating-linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.06) 0 2px,
+        transparent 2px 4px
+      ),
+      radial-gradient(
+        ellipse at 50% 42%,
+        rgba(244, 211, 94, 0.16) 0%,
+        rgba(244, 211, 94, 0) 48%
+      ),
+      radial-gradient(
+        ellipse at 15% 10%,
+        rgba(4, 20, 14, 0.55),
+        transparent 55%
+      ),
+      radial-gradient(
+        ellipse at 85% 90%,
+        rgba(4, 20, 14, 0.55),
+        transparent 60%
+      ),
+      radial-gradient(
+        ellipse at 85% 8%,
+        rgba(4, 20, 14, 0.45),
+        transparent 50%
+      ),
+      radial-gradient(
+        ellipse at 12% 92%,
+        rgba(4, 20, 14, 0.45),
+        transparent 50%
+      ),
+      radial-gradient(
+        ellipse at 30% 20%,
+        rgba(224, 69, 95, 0.05),
+        transparent 55%
+      ),
+      var(--parchment);
+    border-radius: 4px;
+    box-shadow:
+      0 30px 80px rgba(0, 0, 0, 0.55),
+      0 0 0 1px rgba(0, 0, 0, 0.4);
+    padding: 64px 40px;
+  }
+  .book::before {
+    content: "";
+    position: absolute;
+    inset: 14px;
+    border: 1px solid rgba(224, 69, 95, 0.4);
+    border-radius: 2px;
+    pointer-events: none;
+  }
+  .book::after {
+    content: "";
+    position: absolute;
+    inset: 20px;
+    border: 1px solid rgba(244, 211, 94, 0.55);
+    border-radius: 2px;
+    pointer-events: none;
+  }
+
+  .margins {
+    display: grid;
+    grid-template-columns: 64px 1fr 64px;
+    gap: 8px;
+  }
+  @media (max-width: 680px) {
+    .margins {
+      grid-template-columns: 0 1fr 0;
+    }
+    .glyph-col {
+      display: none;
+    }
+  }
+  .glyph-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    opacity: 0.55;
+  }
+  .glyph-col svg {
+    width: 30px;
+    height: 30px;
+    fill: none;
+    stroke: var(--maroon);
+    stroke-width: 1.4;
+  }
+  .glyph-col svg:nth-child(even) {
+    stroke: var(--teal);
+    transform: rotate(-6deg);
+  }
+  .glyph-col svg:nth-child(3n) {
+    stroke: var(--amethyst);
+    transform: rotate(5deg);
+  }
+
+  .content {
+    text-align: center;
+    font-family: "Cormorant Garamond", serif;
+  }
+  .kicker {
+    font-family: "MedievalSharp", cursive;
+    color: var(--maroon);
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+  }
+  h1 {
+    font-family: "Cinzel", serif;
+    font-weight: 700;
+    font-size: clamp(2rem, 5vw, 3.1rem);
+    color: var(--gold);
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+  }
+  .subtitle {
+    font-style: italic;
+    color: var(--ink-soft);
+    font-size: 1.15rem;
+    margin-bottom: 34px;
+  }
+  .divider {
+    width: 120px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    margin: 0 auto 34px;
+  }
+
+  .dropcap {
+    text-align: left;
+    font-size: 1.28rem;
+    line-height: 1.75;
+    color: var(--ink);
+    max-width: 640px;
+    margin: 0 auto 8px;
+  }
+  .dropcap::first-letter {
+    font-family: "Cinzel", serif;
+    font-size: 3.4rem;
+    float: left;
+    line-height: 0.75;
+    padding: 6px 8px 0 0;
+    color: var(--maroon);
+  }
+  .lede-note {
+    font-size: 0.85rem;
+    font-family: "Work Sans", sans-serif;
+    color: var(--ink-soft);
+    opacity: 0.75;
+    margin: 18px 0 40px;
+    text-align: left;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .chapter {
+    text-align: left;
+    max-width: 640px;
+    margin: 0 auto 46px;
+  }
+  .chapter h2 {
+    font-family: "Cinzel", serif;
+    font-size: 1.5rem;
+    color: var(--maroon);
+    margin-bottom: 14px;
+    letter-spacing: 0.4px;
+  }
+  .chapter p {
+    font-size: 1.12rem;
+    line-height: 1.7;
+    color: var(--ink);
+    margin-bottom: 10px;
+  }
+
+  .recipe {
+    list-style: none;
+    text-align: left;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  .recipe li {
+    display: flex;
+    gap: 14px;
+    padding: 14px 0;
+    border-bottom: 1px dashed rgba(244, 211, 94, 0.25);
+  }
+  .recipe .mark {
+    font-family: "Cinzel", serif;
+    color: var(--gold);
+    font-weight: 700;
+    min-width: 26px;
+  }
+  .recipe h3 {
+    font-family: "Cinzel", serif;
+    font-size: 1.05rem;
+    color: var(--gold);
+    margin-bottom: 2px;
+  }
+  .recipe p {
+    font-size: 1rem;
+    color: var(--ink-soft);
+    line-height: 1.5;
+  }
+
+  .plates {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  @media (max-width: 560px) {
+    .plates {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  .plate {
+    aspect-ratio: 3/4;
+    border: 1px solid rgba(244, 211, 94, 0.3);
+    border-radius: 4px;
+    overflow: hidden;
+    background: linear-gradient(
+      160deg,
+      rgba(224, 69, 95, 0.1),
+      rgba(92, 127, 224, 0.12)
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Work Sans", sans-serif;
+    font-size: 0.72rem;
+    color: var(--ink-soft);
+    text-align: center;
+    padding: 8px;
+  }
+  .plate img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .seal {
+    margin: 50px auto 0;
+    text-align: center;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 30px;
+    border-radius: 4px;
+    font-family: "Cinzel", serif;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    background: linear-gradient(120deg, var(--gold), var(--maroon));
+    color: #0e2f22;
+    box-shadow: 0 8px 24px rgba(224, 69, 95, 0.35);
+    transition: transform 0.15s;
+  }
+  .btn:hover {
+    transform: translateY(-2px);
+  }
+  .seal .note {
+    margin-top: 14px;
+    font-family: "Work Sans", sans-serif;
+    font-size: 0.8rem;
+    color: var(--ink-soft);
+  }
+</style>

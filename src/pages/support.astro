@@ -1,0 +1,257 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<MainLayout title="Support Us — Cracked Glasses Studios" activeNav="support">
+    <main>
+        <section class="hero">
+            <div class="wrap">
+                <div class="eyebrow">keep the lights on in the workshop</div>
+                <h1>Support Cracked Glasses Studios</h1>
+                <p class="sub">
+                    We're a small, independent studio building <em
+                        >The Alchemist's Assistant</em
+                    > one late night at a time. If you want to back the project, here's
+                    how.
+                </p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="wrap two-col">
+                <div class="card">
+                    <span class="tag">Free</span>
+                    <h2>Follow &amp; Wishlist</h2>
+                    <p>
+                        The easiest way to help: follow along and share it with
+                        someone who'd like it. The game isn't out yet, so
+                        wishlisting isn't live either &mdash; both are coming
+                        soon.
+                    </p>
+                    <div class="link-list">
+                        <a href="#" class="link-row"
+                            >Twitter / X <span>&rarr;</span></a
+                        >
+                        <a href="#" class="link-row"
+                            >Discord <span>&rarr;</span></a
+                        >
+                        <a href="#" class="link-row"
+                            >Bluesky <span>&rarr;</span></a
+                        >
+                    </div>
+                    <p class="note">
+                        [Placeholder links &mdash; swap in your real social
+                        handles here.]
+                    </p>
+                </div>
+
+                <div class="card highlight">
+                    <span class="tag tag-gold">Tip Jar</span>
+                    <h2>Chip In</h2>
+                    <p>
+                        If you'd like to directly support development, a
+                        one-time tip through PayPal goes straight back into the
+                        workshop &mdash; tools, assets, coffee.
+                    </p>
+                    <a class="btn btn-primary" href="#">Support via PayPal</a>
+                    <p class="note">
+                        [Placeholder link &mdash; swap in your real PayPal.me
+                        link here.]
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section coming-soon">
+            <div class="wrap">
+                <h2>Buy It Directly</h2>
+                <p>
+                    We're setting up a way to get the game straight from us, no
+                    Steam required &mdash; check back here once it's live.
+                </p>
+            </div>
+        </section>
+    </main>
+</MainLayout>
+
+<style>
+    .wrap {
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 0 24px;
+    }
+    main {
+        background: #0e1014;
+    }
+
+    .hero {
+        padding: 90px 0 60px;
+        text-align: center;
+        background:
+            radial-gradient(
+                ellipse 60% 50% at 20% 10%,
+                rgba(92, 127, 224, 0.18),
+                transparent 60%
+            ),
+            radial-gradient(
+                ellipse 55% 45% at 85% 20%,
+                rgba(31, 122, 140, 0.2),
+                transparent 60%
+            ),
+            #0e1014;
+    }
+    .eyebrow {
+        font-family: "Kalam", cursive;
+        color: #4fd6d6;
+        font-size: 1.05rem;
+        transform: rotate(-2deg);
+        margin-bottom: 10px;
+    }
+    h1 {
+        font-family: "Anton", sans-serif;
+        font-weight: 400;
+        text-transform: uppercase;
+        font-size: clamp(2rem, 5vw, 3.2rem);
+        letter-spacing: 0.4px;
+        color: #f2ede1;
+        margin-bottom: 14px;
+    }
+    .sub {
+        max-width: 560px;
+        margin: 0 auto;
+        color: #b8b4a8;
+        font-size: 1.05rem;
+        line-height: 1.6;
+    }
+    .sub em {
+        color: #6fe0ab;
+        font-style: italic;
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+    .two-col {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+    }
+    @media (max-width: 760px) {
+        .two-col {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .card {
+        background: #1b1f2a;
+        border: 1px solid rgba(242, 237, 225, 0.14);
+        border-radius: 14px;
+        padding: 32px;
+    }
+    .card.highlight {
+        border-color: rgba(111, 224, 171, 0.35);
+    }
+    .tag {
+        display: inline-block;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: #1f7a8c;
+        background: rgba(31, 122, 140, 0.14);
+        border: 1px solid rgba(31, 122, 140, 0.4);
+        padding: 4px 10px;
+        border-radius: 999px;
+        margin-bottom: 14px;
+    }
+    .tag-gold {
+        color: #c8a45c;
+        background: rgba(200, 164, 92, 0.14);
+        border-color: rgba(200, 164, 92, 0.4);
+    }
+    .card h2 {
+        font-family: "Anton", sans-serif;
+        font-weight: 400;
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        color: #f2ede1;
+        margin-bottom: 12px;
+        letter-spacing: 0.3px;
+    }
+    .card p {
+        color: #b8b4a8;
+        line-height: 1.65;
+        margin-bottom: 16px;
+    }
+
+    .link-list {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-bottom: 14px;
+    }
+    .link-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 14px;
+        border: 1px solid rgba(242, 237, 225, 0.14);
+        border-radius: 8px;
+        color: #f2ede1;
+        font-weight: 600;
+        font-size: 0.92rem;
+        transition:
+            border-color 0.2s,
+            color 0.2s;
+    }
+    .link-row:hover {
+        border-color: #4fd6d6;
+        color: #4fd6d6;
+    }
+
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 13px 26px;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 0.95rem;
+        letter-spacing: 0.3px;
+        transition: transform 0.15s ease;
+    }
+    .btn-primary {
+        background: linear-gradient(120deg, #5c7fe0, #1f7a8c);
+        color: #0e1014;
+    }
+    .btn-primary:hover {
+        transform: translateY(-2px);
+    }
+
+    .note {
+        font-size: 0.78rem;
+        font-family: "Work Sans", sans-serif;
+        color: #7a7668;
+        opacity: 0.85;
+        margin-bottom: 0;
+    }
+
+    .coming-soon {
+        border-top: 1px solid rgba(242, 237, 225, 0.14);
+        text-align: center;
+        padding: 70px 0;
+    }
+    .coming-soon h2 {
+        font-family: "Anton", sans-serif;
+        font-weight: 400;
+        text-transform: uppercase;
+        font-size: 1.6rem;
+        color: #f2ede1;
+        margin-bottom: 10px;
+    }
+    .coming-soon p {
+        color: #b8b4a8;
+        max-width: 480px;
+        margin: 0 auto;
+        line-height: 1.6;
+    }
+</style>

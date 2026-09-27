@@ -1,0 +1,34 @@
+---
+export interface Props {
+  active?: string;
+}
+const { active = "" } = Astro.props;
+---
+<header>
+  <nav class="wrap">
+    <a class="brand" href="/">
+      <img src="/assets/images/cracked-glasses-logo.png" alt="Cracked Glasses Studios logo" width="40" height="40" />
+      CRACKED GLASSES
+    </a>
+    <div class="navlinks">
+      <a href="/games" class={active === "games" ? "active" : ""}>Games</a>
+      <a href="/about" class={active === "about" ? "active" : ""}>About</a>
+      <a href="/development" class={active === "development" ? "active" : ""}>Development</a>
+      <a href="/support" class={active === "support" ? "active" : ""}>Support</a>
+      <a href="/contact" class={active === "contact" ? "active" : ""}>Contact</a>
+    </div>
+    <button class="navToggle" aria-label="Menu">☰</button>
+  </nav>
+</header>
+
+<style>
+  header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(14,16,20,0.85);backdrop-filter:blur(8px);border-bottom:1px solid rgba(242,237,225,0.14);}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:72px;}
+  .brand{display:flex;align-items:center;gap:10px;font-family:'Anton',sans-serif;letter-spacing:0.5px;font-size:1.05rem;}
+  .brand img{height:40px;width:40px;object-fit:contain;filter:drop-shadow(0 0 6px rgba(95,214,214,0.25));}
+  .navlinks{display:flex;gap:28px;font-size:0.85rem;font-weight:600;letter-spacing:0.4px;text-transform:uppercase;}
+  .navlinks a{opacity:0.8;transition:opacity .2s, color .2s;}
+  .navlinks a:hover, .navlinks a.active{opacity:1;color:#4fd6d6;}
+  .navToggle{display:none;background:none;border:1px solid rgba(242,237,225,0.14);color:#f2ede1;width:40px;height:40px;border-radius:6px;font-size:1.2rem;}
+  @media(max-width:720px){ .navlinks{display:none;} .navToggle{display:block;} }
+</style>
