@@ -111,6 +111,69 @@ import Breadcrumb from "../../components/Breadcrumb.astro";
             <div class="plate">Concept art plate 03<br />[placeholder]</div>
           </div>
 
+          <div class="chapter">
+            <h2>Gameplay</h2>
+            <p>
+              A few clips from the workshop floor.
+            </p>
+          </div>
+          <div class="clips">
+            <blockquote
+              class="tiktok-embed"
+              cite="https://www.tiktok.com/@crackedglassesstudios/video/7669853382579948830"
+              data-video-id="7669853382579948830"
+              style="max-width: 605px;min-width: 325px;"
+            >
+              <section>
+                <a
+                  target="_blank"
+                  title="@crackedglassesstudios"
+                  href="https://www.tiktok.com/@crackedglassesstudios?refer=embed"
+                  >@crackedglassesstudios</a
+                > Game in progress The Alchemists Assistant
+                <a
+                  title="solodev"
+                  target="_blank"
+                  href="https://www.tiktok.com/tag/solodev?refer=embed"
+                  >#SoloDev</a
+                >
+                <a
+                  title="godot"
+                  target="_blank"
+                  href="https://www.tiktok.com/tag/godot?refer=embed">#Godot</a
+                >
+                <a
+                  title="needartist"
+                  target="_blank"
+                  href="https://www.tiktok.com/tag/needartist?refer=embed"
+                  >#needartist</a
+                >
+                <a
+                  target="_blank"
+                  title="♬ original sound - crackedglassesstudios - Tyler Brooks"
+                  href="https://www.tiktok.com/music/original-sound-crackedglassesstudios-7669853392788851487?refer=embed"
+                  >♬ original sound - crackedglassesstudios - Tyler Brooks</a
+                >
+              </section>
+            </blockquote>
+            <blockquote
+              class="tiktok-embed"
+              cite="https://www.tiktok.com/@yourhandle/video/PLACEHOLDER_ID_2"
+              data-video-id="PLACEHOLDER_ID_2"
+            >
+              <section></section>
+            </blockquote>
+            <blockquote
+              class="tiktok-embed"
+              cite="https://www.tiktok.com/@yourhandle/video/PLACEHOLDER_ID_3"
+              data-video-id="PLACEHOLDER_ID_3"
+            >
+              <section></section>
+            </blockquote>
+          </div>
+          <script async src="https://www.tiktok.com/embed.js" is:inline
+          ></script>
+
           <div class="seal">
             <a class="btn" href="#">Follow the Development</a>
             <div class="note">
@@ -414,6 +477,24 @@ import Breadcrumb from "../../components/Breadcrumb.astro";
     height: 100%;
     object-fit: cover;
     display: block;
+  }
+
+  .clips {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    max-width: 640px;
+    margin: 0 auto 46px;
+  }
+  @media (max-width: 680px) {
+    .clips {
+      grid-template-columns: 1fr;
+    }
+  }
+  .clips .tiktok-embed {
+    margin: 0 !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
   }
 
   .seal {
