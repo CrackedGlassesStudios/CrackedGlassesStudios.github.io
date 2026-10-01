@@ -113,66 +113,34 @@ import Breadcrumb from "../../components/Breadcrumb.astro";
 
           <div class="chapter">
             <h2>Gameplay</h2>
-            <p>
-              A few clips from the workshop floor.
-            </p>
+            <p>A look at development in motion.</p>
           </div>
           <div class="clips">
-            <blockquote
-              class="tiktok-embed"
-              cite="https://www.tiktok.com/@crackedglassesstudios/video/7669853382579948830"
-              data-video-id="7669853382579948830"
-              style="max-width: 605px;min-width: 325px;"
+            <a
+              class="clip-card"
+              href="https://www.tiktok.com/@crackedglassesstudios/video/7669853382579948830"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <section>
-                <a
-                  target="_blank"
-                  title="@crackedglassesstudios"
-                  href="https://www.tiktok.com/@crackedglassesstudios?refer=embed"
-                  >@crackedglassesstudios</a
-                > Game in progress The Alchemists Assistant
-                <a
-                  title="solodev"
-                  target="_blank"
-                  href="https://www.tiktok.com/tag/solodev?refer=embed"
-                  >#SoloDev</a
+              <img
+                class="clip-thumb"
+                src="/assets/images/gameplay-thumbnail-01.png"
+                alt="Gameplay preview from The Alchemist's Assistant"
+              />
+              <span class="clip-overlay">
+                <span class="play-icon">
+                  <svg viewBox="0 0 24 24" width="24" height="24"
+                    ><polygon points="6,4 20,12 6,20" fill="currentColor"
+                    ></polygon></svg
+                  >
+                </span>
+                <span class="clip-caption"
+                  >Game in progress &mdash; The Alchemist's Assistant</span
                 >
-                <a
-                  title="godot"
-                  target="_blank"
-                  href="https://www.tiktok.com/tag/godot?refer=embed">#Godot</a
-                >
-                <a
-                  title="needartist"
-                  target="_blank"
-                  href="https://www.tiktok.com/tag/needartist?refer=embed"
-                  >#needartist</a
-                >
-                <a
-                  target="_blank"
-                  title="♬ original sound - crackedglassesstudios - Tyler Brooks"
-                  href="https://www.tiktok.com/music/original-sound-crackedglassesstudios-7669853392788851487?refer=embed"
-                  >♬ original sound - crackedglassesstudios - Tyler Brooks</a
-                >
-              </section>
-            </blockquote>
-            <blockquote
-              class="tiktok-embed"
-              cite="https://www.tiktok.com/@yourhandle/video/PLACEHOLDER_ID_2"
-              data-video-id="PLACEHOLDER_ID_2"
-            >
-              <section></section>
-            </blockquote>
-            <blockquote
-              class="tiktok-embed"
-              cite="https://www.tiktok.com/@yourhandle/video/PLACEHOLDER_ID_3"
-              data-video-id="PLACEHOLDER_ID_3"
-            >
-              <section></section>
-            </blockquote>
+                <span class="clip-cta">Watch on TikTok &rarr;</span>
+              </span>
+            </a>
           </div>
-          <script async src="https://www.tiktok.com/embed.js" is:inline
-          ></script>
 
           <div class="seal">
             <a class="btn" href="#">Follow the Development</a>
@@ -480,21 +448,73 @@ import Breadcrumb from "../../components/Breadcrumb.astro";
   }
 
   .clips {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-    max-width: 640px;
+    text-align: center;
     margin: 0 auto 46px;
   }
-  @media (max-width: 680px) {
-    .clips {
-      grid-template-columns: 1fr;
-    }
+  .clip-card {
+    position: relative;
+    display: inline-block;
+    width: 260px;
+    max-width: 100%;
+    aspect-ratio: 3/4;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid rgba(244, 211, 94, 0.35);
+    transition:
+      border-color 0.2s,
+      transform 0.2s;
   }
-  .clips .tiktok-embed {
-    margin: 0 !important;
-    max-width: 100% !important;
-    min-width: 0 !important;
+  .clip-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-2px);
+  }
+  .clip-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .clip-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+    padding: 20px 16px;
+    background: linear-gradient(
+      180deg,
+      rgba(4, 20, 14, 0) 45%,
+      rgba(4, 20, 14, 0.9) 100%
+    );
+  }
+  .play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: linear-gradient(120deg, var(--gold), var(--maroon));
+    color: #0e2f22;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  }
+  .clip-caption {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 0.98rem;
+    color: var(--ink);
+    line-height: 1.35;
+  }
+  .clip-cta {
+    font-family: "Cinzel", serif;
+    font-size: 0.78rem;
+    letter-spacing: 0.4px;
+    color: var(--gold);
   }
 
   .seal {
